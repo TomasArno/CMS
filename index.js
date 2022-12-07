@@ -1,5 +1,4 @@
 function mostrarResultados(obj) {
-  console.log(obj);
   const items = obj.items;
   const imgData = obj.includes.Asset;
 
@@ -9,7 +8,7 @@ function mostrarResultados(obj) {
   const imgEl = templateEl.querySelector(".img");
   const titleEl = templateEl.querySelector(".proyect-title");
   const descriptionEl = templateEl.querySelector(".proyect-description");
-  const linkEl = templateEl.querySelector(".link");
+  const linkEl = templateEl.querySelector(".see-more");
 
   let contador = 0;
   while (contador < items.length) {
@@ -24,7 +23,7 @@ function mostrarResultados(obj) {
   }
 }
 
-function main() {
+function parseador() {
   fetch(
     "https://cdn.contentful.com/spaces/xfz9lznsmed7/environments/master/entries?access_token=5qriaqQtppfoNJR67S_Qv2ZKGPR3xA456sGwZj23GPM"
   ).then((obj) => {
@@ -33,5 +32,7 @@ function main() {
     });
   });
 }
+
+function main() {}
 
 main();
